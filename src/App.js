@@ -7,6 +7,18 @@ class App extends Component {
   state ={
     todos:[]
   }
+  componentDidMount(){
+    let tid = localStorage.getItem('tasks');
+    tid = JSON.parse(tid);
+    if(tid){
+     let todos =tid.filter(todo=>{
+      return true
+    })
+    this.setState({
+      todos:todos
+    })
+  }
+  }
   addTodo=(todo)=>{
      i++;
      todo.id = i;
@@ -14,6 +26,8 @@ class App extends Component {
      this.setState({
        todos:todos
      });
+     localStorage.clear();
+     localStorage.setItem('tasks',JSON.stringify(todos))
   }
   deleteTodo = (id)=>{
      let todos = this.state.todos.filter(todo =>{
@@ -22,6 +36,8 @@ class App extends Component {
      this.setState({
        todos:todos
      })
+     localStorage.clear();
+     localStorage.setItem('tasks',JSON.stringify(todos))
   }
   render(){
   return (
