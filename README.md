@@ -1,3 +1,7 @@
+a simple to-do app 
+you can find this app here https://zen-bhaskara-5cb6f1.netlify.app/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
