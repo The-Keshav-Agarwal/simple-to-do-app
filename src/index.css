@@ -15,7 +15,7 @@ code {
 }
 .displaytodo{
   border-radius: 620px; 
-  width:calc(35%);
+   width:calc(23vw + 10rem);
   margin: auto;
   margin-top: 10px;
   display: flex;
